@@ -1,23 +1,21 @@
 'use client';
 
 import { createTheme } from '@mui/material';
+import { darkPalette, lightPalette } from './palettes';
 
 const theme = createTheme({
 	typography: {
-		fontFamily: 'var(--font-roboto)',
+		fontFamily: 'var(--font-open-sans)',
+	},
+	cssVariables: {
+		colorSchemeSelector: 'class',
 	},
 	colorSchemes: {
 		dark: {
-			palette: {
-				background: {
-					default: 'rgb(44, 44, 44)',
-					paper: 'rgb(44, 44, 44)',
-				},
-				text: {
-					primary: '#ffffff',
-					secondary: '#b0bec5',
-				},
-			},
+			palette: darkPalette,
+		},
+		light: {
+			palette: lightPalette,
 		},
 	},
 	palette: {

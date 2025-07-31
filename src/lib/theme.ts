@@ -3,7 +3,7 @@
 import { createTheme } from '@mui/material';
 import { darkPalette, lightPalette } from './palettes';
 
-const theme = createTheme({
+export const theme = createTheme({
 	typography: {
 		fontFamily: 'var(--font-open-sans)',
 	},
@@ -18,9 +18,4 @@ const theme = createTheme({
 			palette: lightPalette,
 		},
 	},
-	palette: {
-		mode: 'dark',
-	},
 });
-
-export default theme;

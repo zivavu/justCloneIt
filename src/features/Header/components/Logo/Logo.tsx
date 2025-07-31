@@ -1,8 +1,8 @@
-import { useTheme } from '@mui/material';
+import { useColorScheme } from '@mui/material';
 
 export function Logo() {
-	const theme = useTheme();
-	const fillColor = theme.palette.mode === 'dark' ? '#e0e0e0' : '#37474f';
+	const { mode } = useColorScheme();
+	const fillColor = mode === 'dark' ? '#e0e0e0' : '#37474f';
 
 	return (
 		<svg

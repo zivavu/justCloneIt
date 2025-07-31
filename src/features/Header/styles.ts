@@ -6,7 +6,6 @@ export const StyledHeader = styled('header')(({ theme }) => ({
 	padding: theme.spacing(0, 3),
 	backgroundColor: theme.vars?.palette.background.paper,
 	alignItems: 'center',
-	gap: theme.spacing(2),
-	borderBottom: `1px solid ${theme.palette.divider}`,
-	boxShadow: `rgb(57, 57, 57) 0px 1px 0px 0px`,
+	gap: theme.spacing(1.5),
+	borderBottom: `1px solid ${theme.vars?.palette.divider}`,
 }));

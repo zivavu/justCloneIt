@@ -1,25 +1,24 @@
 'use client';
 
-import { IconSwitch } from '@/components/molecules/IconSwitch/IconSwitch';
-import { Typography, useColorScheme } from '@mui/material';
+import { Typography } from '@mui/material';
 import { Logo } from './components/Logo/Logo';
+import { Nav } from './components/Nav/Nav';
+import { ThemeSwitch } from './components/ThemeSwitch/ThemeSwitch';
 import { StyledHeader } from './styles';
 
 export function Header() {
-	const { mode, setMode } = useColorScheme();
-
 	return (
 		<StyledHeader>
 			<Logo />
-			<Typography variant="caption" fontWeight={400} letterSpacing={`0.15px`}>
+			<Typography
+				variant="caption"
+				fontWeight={400}
+				letterSpacing={`0.15px`}
+				color="textSecondary">
 				#1 Job Board for tech industry in Europe
 			</Typography>
-
-			<IconSwitch
-				checked={mode === 'dark'}
-				onChange={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-				icon
-			/>
+			<ThemeSwitch />
+			<Nav />
 		</StyledHeader>
 	);
 }

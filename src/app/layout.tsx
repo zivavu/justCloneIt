@@ -6,7 +6,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { Open_Sans } from 'next/font/google';
 
 const openSans = Open_Sans({
-	weight: ['300', '400', '500', '700'],
+	weight: ['300', '400', '500', '600', '700'],
 	subsets: ['latin'],
 	display: 'swap',
 	variable: '--font-open-sans',

@@ -18,4 +18,20 @@ export const theme = createTheme({
 			palette: lightPalette,
 		},
 	},
+	components: {
+		MuiButtonBase: {
+			styleOverrides: {
+				root: {
+					textTransform: 'none',
+				},
+			},
+		},
+		MuiButton: {
+			styleOverrides: {
+				root: {
+					textTransform: 'none',
+				},
+			},
+		},
+	},
 });

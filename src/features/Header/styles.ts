@@ -1,0 +1,10 @@
+import { styled } from '@mui/material';
+
+export const StyledHeader = styled('header')(({ theme }) => ({
+	display: 'flex',
+	height: '64px',
+	padding: theme.spacing(0, 3),
+	backgroundColor: theme.palette.background.paper,
+	alignItems: 'center',
+	borderBottom: `1px solid ${theme.palette.divider}`,
+}));

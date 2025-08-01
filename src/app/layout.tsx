@@ -1,4 +1,4 @@
-import { Header } from '@/features/Header/Header';
+import { Header } from '@/components/organisms/Header/Header';
 import { theme } from '@/lib/theme';
 import { CssBaseline, InitColorSchemeScript } from '@mui/material';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';

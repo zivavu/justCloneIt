@@ -43,11 +43,15 @@ export function Nav() {
 				</Button>
 
 				<IconButton LinkComponent={Link} href={'/favorite-offers'}>
-					<BookmarkBorderOutlined />
+					<BookmarkBorderOutlined
+						sx={{ color: theme.vars?.palette.text.secondary }}
+					/>
 				</IconButton>
 
 				<IconButton LinkComponent={Link} href={'/favorite-offers'}>
-					<NotificationsOutlined />
+					<NotificationsOutlined
+						sx={{ color: theme.vars?.palette.text.secondary }}
+					/>
 				</IconButton>
 
 				<IconButton>
@@ -57,7 +61,7 @@ export function Nav() {
 				</IconButton>
 
 				<IconButton>
-					<Menu />
+					<Menu sx={{ color: theme.vars?.palette.text.secondary }} />
 				</IconButton>
 			</Stack>
 		</Stack>

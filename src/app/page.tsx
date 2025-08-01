@@ -1,3 +1,10 @@
+import { SearchFilterBar } from '@/components/pages/Home/components/SearchFilterBar/SearchFilterBar';
+import { Box } from '@mui/material';
+
 export default function Home() {
-	return <div></div>;
+	return (
+		<Box>
+			<SearchFilterBar />
+		</Box>
+	);
 }

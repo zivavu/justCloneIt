@@ -18,30 +18,45 @@ import {
 	useTheme,
 } from '@mui/material';
 import { useRef, useState } from 'react';
+import { valueLabel } from '../../mockOptions';
 import { mockLocations } from './mockLocations';
 
 export function LocationInput() {
 	const theme = useTheme();
 
 	const [isPoperOpen, setIsPopoverOpen] = useState(false);
+	const [choosenLocation, setChoosenLocation] = useState<valueLabel | null>(
+		null
+	);
 	const anchorEl = useRef<HTMLButtonElement | null>(null);
+
+	function handleSetLocation(location: valueLabel) {
+		setChoosenLocation(location);
+	}
 	return (
 		<>
 			<Button
 				ref={anchorEl}
 				onClick={() => setIsPopoverOpen(!isPoperOpen)}
-				variant="outlined"
-				color="neutral"
+				variant={!!choosenLocation ? 'contained' : 'outlined'}
+				color={!!choosenLocation ? 'primary' : 'neutral'}
 				sx={{ borderRadius: '50px', height: '40px', px: 3 }}>
 				<Stack
 					direction="row"
 					spacing={1}
-					sx={{ '& > *': { color: theme.vars?.palette.text.secondary } }}>
+					sx={{
+						'& > *': {
+							color: choosenLocation
+								? theme.vars?.palette.text.primary
+								: theme.vars?.palette.text.secondary,
+						},
+					}}>
 					<LocationOnOutlined />
 					<Typography variant="subtitle2">Location</Typography>
 					<ExpandMore />
 				</Stack>
 			</Button>
+
 			<Popover
 				open={isPoperOpen}
 				anchorEl={anchorEl.current}
@@ -72,7 +87,10 @@ export function LocationInput() {
 							Location
 						</Typography>
 						<Typography>
-							<Button>
+							<Button
+								onClick={() => {
+									setChoosenLocation(null);
+								}}>
 								<Typography variant="subtitle2" color="textSecondary">
 									Clear filters
 								</Typography>
@@ -82,6 +100,9 @@ export function LocationInput() {
 
 					<Autocomplete
 						options={mockLocations}
+						onChange={(event, newValue) => {
+							setChoosenLocation(newValue);
+						}}
 						renderInput={(params) => (
 							<TextField
 								{...params}
@@ -108,9 +129,21 @@ export function LocationInput() {
 					<Typography variant="h6">Top Poland</Typography>
 					<Stack flexDirection="row" gap={1} flexWrap="wrap">
 						{mockLocations.slice(0, 6).map((location) => (
-							<ButtonBase key={location.value} sx={{ borderRadius: '50px' }}>
+							<ButtonBase
+								key={location.value}
+								sx={{ borderRadius: '50px' }}
+								onClick={() => handleSetLocation(location)}>
 								<Chip
-									variant="outlined"
+									variant={
+										choosenLocation?.value === location.value
+											? 'filled'
+											: 'outlined'
+									}
+									color={
+										choosenLocation?.value === location.value
+											? 'primary'
+											: 'default'
+									}
 									label={location.label}
 									sx={{ padding: theme.spacing(2, 1) }}
 								/>
@@ -121,9 +154,21 @@ export function LocationInput() {
 					<Typography variant="h6">Top World</Typography>
 					<Stack flexDirection="row" gap={1} flexWrap="wrap">
 						{mockLocations.slice(90, 96).map((location) => (
-							<ButtonBase key={location.value} sx={{ borderRadius: '50px' }}>
+							<ButtonBase
+								key={location.value}
+								sx={{ borderRadius: '50px' }}
+								onClick={() => handleSetLocation(location)}>
 								<Chip
-									variant="outlined"
+									variant={
+										choosenLocation?.value === location.value
+											? 'filled'
+											: 'outlined'
+									}
+									color={
+										choosenLocation?.value === location.value
+											? 'primary'
+											: 'default'
+									}
 									label={location.label}
 									sx={{ padding: theme.spacing(2, 1) }}
 								/>
@@ -134,9 +179,21 @@ export function LocationInput() {
 					<Typography variant="h6">Other Locations</Typography>
 					<Stack flexDirection="row" gap={1} flexWrap="wrap">
 						{mockLocations.slice(30, 45).map((location) => (
-							<ButtonBase key={location.value} sx={{ borderRadius: '50px' }}>
+							<ButtonBase
+								key={location.value}
+								sx={{ borderRadius: '50px' }}
+								onClick={() => handleSetLocation(location)}>
 								<Chip
-									variant="outlined"
+									variant={
+										choosenLocation?.value === location.value
+											? 'filled'
+											: 'outlined'
+									}
+									color={
+										choosenLocation?.value === location.value
+											? 'primary'
+											: 'default'
+									}
 									label={location.label}
 									sx={{ padding: theme.spacing(2, 1) }}
 								/>

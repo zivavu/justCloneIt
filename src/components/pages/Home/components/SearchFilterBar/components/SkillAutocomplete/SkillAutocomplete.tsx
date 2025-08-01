@@ -1,6 +1,6 @@
+import { Search } from '@mui/icons-material';
 import { Autocomplete, Chip, Stack, TextField, useTheme } from '@mui/material';
 import { mockOptions, valueLabel } from '../../mockOptions';
-import { Search } from '@mui/icons-material';
 
 export function SkillAutocomplete() {
 	const theme = useTheme();
@@ -30,6 +30,9 @@ export function SkillAutocomplete() {
 								maxHeight: '40px',
 								borderRadius: '50px',
 								backgroundColor: theme.vars?.palette.background.default,
+								fontSize: '0.875rem',
+								fontWeight: 500,
+								color: theme.vars?.palette.text.secondary,
 							},
 							placeholder: 'Search',
 							startAdornment: (

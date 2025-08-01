@@ -37,6 +37,8 @@ export const lightPalette: PaletteOptions = {
 	divider: '#e5e5e5',
 	neutral: {
 		main: '#f3f6f8',
+		dark: '#282a3a',
+		light: '#fdfeffff',
 		contrastText: '#000000',
 	},
 };
@@ -58,6 +60,8 @@ export const darkPalette: PaletteOptions = {
 	divider: '#393939',
 	neutral: {
 		main: '#454545',
+		dark: '#282a3a',
+		light: '#bdbdbd',
 		contrastText: '#ffffff',
 	},
 };

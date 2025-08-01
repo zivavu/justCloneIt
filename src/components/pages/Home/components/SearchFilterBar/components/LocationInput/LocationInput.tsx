@@ -7,12 +7,7 @@ export function LocationInput() {
 		<Button
 			variant="outlined"
 			color="neutral"
-			sx={{
-				borderRadius: '50px',
-				height: '40px',
-				px: 3,
-				borderColor: theme.vars?.palette.grey[700],
-			}}>
+			sx={{ borderRadius: '50px', height: '40px', px: 3 }}>
 			<Stack
 				direction="row"
 				spacing={1}

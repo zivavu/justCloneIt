@@ -31,6 +31,27 @@ export const theme = createTheme({
 				root: {
 					textTransform: 'none',
 				},
+				outlined: ({ theme }) => ({
+					borderColor: theme.vars.palette.neutral.main,
+					'&:hover': {
+						borderColor: theme.vars.palette.neutral.light,
+					},
+				}),
+			},
+		},
+		MuiOutlinedInput: {
+			styleOverrides: {
+				root: ({ theme }) => ({
+					'& .MuiOutlinedInput-notchedOutline': {
+						borderColor: theme.vars.palette.neutral.main,
+					},
+					'&:hover .MuiOutlinedInput-notchedOutline': {
+						borderColor: theme.vars.palette.neutral.light,
+					},
+					'&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+						borderColor: theme.vars.palette.neutral.light,
+					},
+				}),
 			},
 		},
 	},

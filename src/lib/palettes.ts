@@ -60,7 +60,7 @@ export const darkPalette: PaletteOptions = {
 	divider: '#393939',
 	neutral: {
 		main: '#454545',
-		dark: '#282a3a',
+		dark: '#0e0e0e',
 		light: '#bdbdbd',
 		contrastText: '#ffffff',
 	},

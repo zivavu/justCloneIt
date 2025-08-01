@@ -41,6 +41,7 @@ export function SkillAutocomplete() {
 									{params.InputProps.startAdornment}
 								</>
 							),
+							endAdornment: null,
 						},
 					}}
 				/>

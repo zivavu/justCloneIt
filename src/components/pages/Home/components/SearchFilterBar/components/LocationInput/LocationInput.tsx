@@ -1,21 +1,162 @@
-import { ExpandMore, LocationOnOutlined } from '@mui/icons-material';
-import { Button, Stack, Typography, useTheme } from '@mui/material';
+'use client';
+
+import {
+	ExpandMore,
+	KeyboardArrowDown,
+	LocationOnOutlined,
+	Search,
+} from '@mui/icons-material';
+import {
+	Autocomplete,
+	Button,
+	ButtonBase,
+	Chip,
+	Popover,
+	Stack,
+	TextField,
+	Typography,
+	useTheme,
+} from '@mui/material';
+import { useRef, useState } from 'react';
+import { mockLocations } from './mockLocations';
 
 export function LocationInput() {
 	const theme = useTheme();
+
+	const [isPoperOpen, setIsPopoverOpen] = useState(false);
+	const anchorEl = useRef<HTMLButtonElement | null>(null);
 	return (
-		<Button
-			variant="outlined"
-			color="neutral"
-			sx={{ borderRadius: '50px', height: '40px', px: 3 }}>
-			<Stack
-				direction="row"
-				spacing={1}
-				sx={{ '& > *': { color: theme.vars?.palette.text.secondary } }}>
-				<LocationOnOutlined />
-				<Typography variant="subtitle2">Location</Typography>
-				<ExpandMore />
-			</Stack>
-		</Button>
+		<>
+			<Button
+				ref={anchorEl}
+				onClick={() => setIsPopoverOpen(!isPoperOpen)}
+				variant="outlined"
+				color="neutral"
+				sx={{ borderRadius: '50px', height: '40px', px: 3 }}>
+				<Stack
+					direction="row"
+					spacing={1}
+					sx={{ '& > *': { color: theme.vars?.palette.text.secondary } }}>
+					<LocationOnOutlined />
+					<Typography variant="subtitle2">Location</Typography>
+					<ExpandMore />
+				</Stack>
+			</Button>
+			<Popover
+				open={isPoperOpen}
+				anchorEl={anchorEl.current}
+				anchorOrigin={{
+					vertical: 'bottom',
+					horizontal: 'left',
+				}}
+				slotProps={{
+					paper: {
+						elevation: 3,
+						sx: {
+							marginTop: theme.spacing(1),
+							border: `1px solid ${theme.vars?.palette.neutral.main}`,
+							borderRadius: '20px',
+							backgroundColor: theme.vars?.palette.background.paper,
+							backgroundImage: 'none',
+						},
+					},
+				}}
+				onClose={() => setIsPopoverOpen(false)}>
+				<Stack spacing={3} padding={theme.spacing(3, 4)} maxWidth="714px">
+					<Stack
+						direction="row"
+						width={'100%'}
+						justifyContent="space-between"
+						alignItems="center">
+						<Typography fontWeight={600} variant="h6" color="textSecondary">
+							Location
+						</Typography>
+						<Typography>
+							<Button>
+								<Typography variant="subtitle2" color="textSecondary">
+									Clear filters
+								</Typography>
+							</Button>
+						</Typography>
+					</Stack>
+
+					<Autocomplete
+						options={mockLocations}
+						renderInput={(params) => (
+							<TextField
+								{...params}
+								slotProps={{
+									input: {
+										...params.InputProps,
+										sx: {
+											borderRadius: theme.spacing(1.5),
+											fontSize: '14px',
+										},
+										placeholder: 'Where do you want to work?',
+										startAdornment: (
+											<>
+												<Search sx={{ ml: 0.5 }} />
+												{params.InputProps.startAdornment}
+											</>
+										),
+										endAdornment: <KeyboardArrowDown />,
+									},
+								}}
+							/>
+						)}
+					/>
+					<Typography variant="h6">Top Poland</Typography>
+					<Stack flexDirection="row" gap={1} flexWrap="wrap">
+						{mockLocations.slice(0, 6).map((location) => (
+							<ButtonBase key={location.value} sx={{ borderRadius: '50px' }}>
+								<Chip
+									variant="outlined"
+									label={location.label}
+									sx={{ padding: theme.spacing(2, 1) }}
+								/>
+							</ButtonBase>
+						))}
+					</Stack>
+
+					<Typography variant="h6">Top World</Typography>
+					<Stack flexDirection="row" gap={1} flexWrap="wrap">
+						{mockLocations.slice(90, 96).map((location) => (
+							<ButtonBase key={location.value} sx={{ borderRadius: '50px' }}>
+								<Chip
+									variant="outlined"
+									label={location.label}
+									sx={{ padding: theme.spacing(2, 1) }}
+								/>
+							</ButtonBase>
+						))}
+					</Stack>
+
+					<Typography variant="h6">Other Locations</Typography>
+					<Stack flexDirection="row" gap={1} flexWrap="wrap">
+						{mockLocations.slice(30, 45).map((location) => (
+							<ButtonBase key={location.value} sx={{ borderRadius: '50px' }}>
+								<Chip
+									variant="outlined"
+									label={location.label}
+									sx={{ padding: theme.spacing(2, 1) }}
+								/>
+							</ButtonBase>
+						))}
+					</Stack>
+				</Stack>
+				<Stack
+					width="full"
+					p={theme.spacing(3)}
+					bgcolor={theme.vars?.palette.neutral.dark}>
+					<Button
+						variant="contained"
+						size="large"
+						color="primary"
+						sx={{ borderRadius: '50px', ml: 'auto', px: 4 }}>
+						<Typography variant="subtitle2">Show offers</Typography>
+					</Button>
+				</Stack>
+			</Popover>
+		</>
 	);
 }

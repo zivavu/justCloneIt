@@ -6,6 +6,9 @@ import { darkPalette, lightPalette } from './palettes';
 export const theme = createTheme({
 	typography: {
 		fontFamily: 'var(--font-open-sans)',
+		fontWeightRegular: 600,
+		fontWeightMedium: 600,
+		fontWeightBold: 700,
 	},
 	cssVariables: {
 		colorSchemeSelector: 'class',

@@ -24,7 +24,6 @@ export type SkillAutocompleteProps = PaperOwnProps &
 
 export function SkillAutocomplete() {
 	const theme = useTheme();
-	const [open, setOpen] = useState(true);
 	const [selected, setSelected] = useState<valueLabel[]>([]);
 
 	function PopperPaper(props: SkillAutocompleteProps) {
@@ -85,7 +84,6 @@ export function SkillAutocomplete() {
 			multiple
 			blurOnSelect
 			disableCloseOnSelect
-			open={open}
 			disablePortal
 			slots={{ paper: PopperPaper }}
 			renderInput={(params) => (

@@ -17,6 +17,7 @@ export const StyledPopperListItem = styled('li', {
 	...(selected && {
 		color: theme.vars?.palette.primary.main,
 	}),
+	cursor: 'pointer',
 }));
 
 export const StyledChip = styled(Chip)(({ theme }) => ({

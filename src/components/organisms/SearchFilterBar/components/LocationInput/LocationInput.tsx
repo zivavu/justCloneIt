@@ -40,19 +40,24 @@ export function LocationInput() {
 				onClick={() => setIsPopoverOpen(!isPoperOpen)}
 				variant={!!choosenLocation ? 'contained' : 'outlined'}
 				color={!!choosenLocation ? 'primary' : 'neutral'}
-				sx={{ borderRadius: '50px', height: '40px', px: 3.5 }}>
+				sx={{
+					borderRadius: '50px',
+					height: '40px',
+					px: 3.5,
+					minWidth: 'fit-content',
+				}}>
 				<Stack
 					direction="row"
 					spacing={1}
 					sx={{
 						'& > *': {
 							color: choosenLocation
-								? theme.vars?.palette.text.primary
+								? theme.vars?.palette.common.white
 								: theme.vars?.palette.text.secondary,
 						},
 					}}>
 					<LocationOnOutlined />
-					<Typography variant="subtitle2">
+					<Typography variant="subtitle2" whiteSpace="nowrap">
 						{choosenLocation?.label || 'Location'}
 					</Typography>
 					<ExpandMore />

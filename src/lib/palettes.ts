@@ -19,6 +19,12 @@ declare module '@mui/material/Button' {
 	}
 }
 
+declare module '@mui/material/Chip' {
+	interface ButtonPropsColorOverrides {
+		neutral: true;
+	}
+}
+
 export const lightPalette: PaletteOptions = {
 	primary: {
 		main: '#f23d7b',

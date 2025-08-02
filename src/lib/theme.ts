@@ -57,5 +57,14 @@ export const theme = createTheme({
 				}),
 			},
 		},
+		MuiChip: {
+			styleOverrides: {
+				root: {
+					'.MuiChip-labelSmall': {
+						fontSize: '0.75rem',
+					},
+				},
+			},
+		},
 	},
 });

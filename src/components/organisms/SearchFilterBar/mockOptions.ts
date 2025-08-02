@@ -4,6 +4,7 @@ export interface valueLabel {
 }
 
 export const mockOptions: valueLabel[] = [
+	{ label: 'Adobe Experience Manager', value: 'adobe-experience-manager' },
 	{ label: 'JavaScript', value: 'javascript' },
 	{ label: 'TypeScript', value: 'typescript' },
 	{ label: 'Python', value: 'python' },

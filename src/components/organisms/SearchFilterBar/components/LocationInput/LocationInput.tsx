@@ -206,7 +206,15 @@ export function LocationInput() {
 				<Stack
 					width="full"
 					p={theme.spacing(3)}
-					bgcolor={theme.vars?.palette.neutral.dark}>
+					sx={[
+						(theme) => ({
+							backgroundColor: theme.vars?.palette.neutral.main,
+						}),
+						(theme) =>
+							theme.applyStyles('dark', {
+								backgroundColor: theme.vars?.palette.neutral.dark,
+							}),
+					]}>
 					<Button
 						variant="contained"
 						size="large"

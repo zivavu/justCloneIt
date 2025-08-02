@@ -1,17 +1,16 @@
 import { styled, Switch, SwitchProps } from '@mui/material';
 
-export const IconSwitch = styled((props: SwitchProps) => (
+export const PrimarySwitch = styled((props: SwitchProps) => (
 	<Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
 ))(({ theme }) => ({
-	width: 56,
-	height: 32,
+	width: 48,
+	height: 28,
 	padding: 0,
 	'& .MuiSwitch-switchBase': {
 		padding: 0,
 		margin: 5,
-		transitionDuration: '300ms',
 		'&.Mui-checked': {
-			transform: 'translateX(24px)',
+			transform: 'translateX(20px)',
 			color: '#fff',
 			'& + .MuiSwitch-track': {
 				backgroundColor: theme?.vars?.palette.background.default,
@@ -37,8 +36,8 @@ export const IconSwitch = styled((props: SwitchProps) => (
 	},
 	'& .MuiSwitch-thumb': {
 		boxSizing: 'border-box',
-		width: 22,
-		height: 22,
+		width: 18,
+		height: 18,
 		boxShadow: 'none',
 		backgroundColor: theme.vars?.palette.common.white,
 		...theme.applyStyles('dark', {
@@ -50,8 +49,5 @@ export const IconSwitch = styled((props: SwitchProps) => (
 		borderRadius: '26px',
 		backgroundColor: theme.vars?.palette.background.default,
 		opacity: 1,
-		transition: theme.transitions.create(['background-color'], {
-			duration: 500,
-		}),
 	},
 }));

@@ -1,3 +1,5 @@
+'use client';
+
 import { AutoAwesome, Close, Search } from '@mui/icons-material';
 import {
 	Autocomplete,

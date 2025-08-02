@@ -1,6 +1,6 @@
 'use client';
 
-import { IconSwitch } from '@/components/molecules/IconSwitch/IconSwitch';
+import { GreyIconSwitch } from '@/components/atoms/IconSwitch/GreyIconSwitch';
 import { DarkMode, Sunny } from '@mui/icons-material';
 import { useColorScheme, useTheme } from '@mui/material';
 
@@ -10,7 +10,7 @@ export function ThemeSwitch() {
 
 	if (!mode) return null;
 	return (
-		<IconSwitch
+		<GreyIconSwitch
 			checked={mode === 'dark'}
 			onChange={() => setMode(mode === 'dark' ? 'light' : 'dark')}
 			icon={

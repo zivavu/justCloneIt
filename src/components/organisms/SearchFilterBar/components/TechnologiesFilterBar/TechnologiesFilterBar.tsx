@@ -1,3 +1,5 @@
+'use client';
+
 import { MoreHoriz } from '@mui/icons-material';
 import {
 	ButtonBase,
@@ -18,7 +20,7 @@ export function TechnologiesFilterBar() {
 	const theme = useTheme();
 
 	const rootEl = useRef<HTMLDivElement>(null);
-	const [maxTechnologies, setMaxTechnologies] = useState(0);
+	const [maxTechnologies, setMaxTechnologies] = useState(20);
 
 	function handleResize() {
 		if (!rootEl?.current) return;
@@ -32,8 +34,6 @@ export function TechnologiesFilterBar() {
 		window.addEventListener('resize', handleResize);
 		handleResize();
 	}, []);
-
-	console.log(maxTechnologies);
 
 	return (
 		<Stack

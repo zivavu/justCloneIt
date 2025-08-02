@@ -43,17 +43,30 @@ export const theme = createTheme({
 			},
 		},
 		MuiOutlinedInput: {
+			defaultProps: { size: 'small' },
 			styleOverrides: {
 				root: ({ theme }) => ({
 					'& .MuiOutlinedInput-notchedOutline': {
 						borderColor: theme.vars.palette.neutral.main,
+						transition: 'border-color 0.2s ease-in-out',
 					},
 					'&:hover .MuiOutlinedInput-notchedOutline': {
-						borderColor: theme.vars.palette.neutral.light,
+						borderColor: theme.vars.palette.neutral.dark,
 					},
 					'&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-						borderColor: theme.vars.palette.neutral.light,
+						borderColor: theme.vars.palette.neutral.dark,
 					},
+					...theme.applyStyles('dark', {
+						'& .MuiOutlinedInput-notchedOutline': {
+							borderColor: theme.vars.palette.neutral.main,
+						},
+						'&:hover .MuiOutlinedInput-notchedOutline': {
+							borderColor: theme.vars.palette.neutral.light,
+						},
+						'&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+							borderColor: theme.vars.palette.neutral.light,
+						},
+					}),
 				}),
 			},
 		},
@@ -63,6 +76,14 @@ export const theme = createTheme({
 					'.MuiChip-labelSmall': {
 						fontSize: '0.75rem',
 					},
+				},
+			},
+		},
+		MuiAccordion: {
+			defaultProps: { elevation: 0 },
+			styleOverrides: {
+				root: {
+					borderRadius: '1.25rem',
 				},
 			},
 		},

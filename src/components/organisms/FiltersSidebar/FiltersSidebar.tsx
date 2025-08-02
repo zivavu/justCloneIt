@@ -2,7 +2,7 @@
 
 import { Checkbox } from '@/components/atoms/Checkbox/Checkbox';
 import { PrimarySwitch } from '@/components/atoms/PrimarySwitch/PrimarySwitch';
-import { KeyboardArrowDown } from '@mui/icons-material';
+import { AttachMoney, KeyboardArrowDown } from '@mui/icons-material';
 import {
 	Accordion,
 	AccordionDetails,
@@ -34,7 +34,10 @@ export function FiltersSidebar() {
 					}}>
 					<Divider sx={{ marginTop: -2 }} />
 					<Stack direction="row" spacing={2} alignItems="center">
-						<PrimarySwitch />
+						<PrimarySwitch
+							slots={{ thumb: AttachMoney }}
+							slotProps={{ thumb: { sx: { borderRadius: '50%', p: 0.25 } } }}
+						/>
 						<Typography variant="body2">
 							Show only offers with salary
 						</Typography>

@@ -65,11 +65,11 @@ export function SkillAutocomplete() {
 	return (
 		<Autocomplete
 			sx={{
-				borderRadius: '50px',
 				maxHeight: '40px',
 				'& .MuiInputBase-root': {
 					flexWrap: 'nowrap',
 					width: '210px',
+					borderRadius: '50px',
 					overflow: 'hidden',
 					'&.Mui-focused': {
 						'& .MuiChip-root': {

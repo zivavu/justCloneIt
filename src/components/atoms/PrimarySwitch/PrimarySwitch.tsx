@@ -8,18 +8,22 @@ export const PrimarySwitch = styled((props: SwitchProps) => (
 	padding: 0,
 	'& .MuiSwitch-switchBase': {
 		padding: 0,
-		margin: 5,
+		margin: 4,
 		'&.Mui-checked': {
 			transform: 'translateX(20px)',
 			color: '#fff',
 			'& + .MuiSwitch-track': {
-				backgroundColor: theme?.vars?.palette.background.default,
+				backgroundColor: theme?.vars?.palette.primary.main,
 				opacity: 1,
 			},
 			'&.Mui-disabled + .MuiSwitch-track': {
 				opacity: 0.5,
 			},
+			'&:hover + .MuiSwitch-track': {
+				backgroundColor: theme?.vars?.palette.primary.dark,
+			},
 		},
+
 		'&.Mui-focusVisible .MuiSwitch-thumb': {
 			color: '#8a8a8aff',
 			border: '6px solid #fff',
@@ -36,18 +40,17 @@ export const PrimarySwitch = styled((props: SwitchProps) => (
 	},
 	'& .MuiSwitch-thumb': {
 		boxSizing: 'border-box',
-		width: 18,
-		height: 18,
+		width: 20,
+		height: 20,
 		boxShadow: 'none',
 		backgroundColor: theme.vars?.palette.common.white,
 		...theme.applyStyles('dark', {
-			backgroundColor: theme.vars?.palette.grey[500],
+			backgroundColor: theme.vars?.palette.grey[900],
 		}),
 	},
 	'& .MuiSwitch-track': {
-		border: `1px solid ${theme.vars?.palette.divider}`,
 		borderRadius: '26px',
-		backgroundColor: theme.vars?.palette.background.default,
+		backgroundColor: theme.vars?.palette.neutral.main,
 		opacity: 1,
 	},
 }));

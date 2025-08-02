@@ -1,6 +1,6 @@
 import { styled, Switch, SwitchProps } from '@mui/material';
 
-export const GreyIconSwitch = styled((props: SwitchProps) => (
+export const StyledThemeSwitch = styled((props: SwitchProps) => (
 	<Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
 ))(({ theme }) => ({
 	width: 56,

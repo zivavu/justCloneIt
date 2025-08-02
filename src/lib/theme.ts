@@ -57,23 +57,21 @@ export const theme = createTheme({
 				root: ({ theme }) => ({
 					height: '48px',
 					fontSize: '14px',
+					borderColor: theme.vars.palette.neutral.main,
+					transition: 'border-color 0.2s ease-in-out',
+					borderRadius: '12px',
 
-					'& .MuiOutlinedInput-notchedOutline': {
-						borderColor: theme.vars.palette.neutral.main,
-						transition: 'border-color 0.2s ease-in-out',
-						borderRadius: '12px',
-					},
-					'&:hover .MuiOutlinedInput-notchedOutline': {
+					'&:hover ': {
 						borderColor: theme.vars.palette.neutral.dark,
 					},
-					'&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+					'&.Mui-focused .MuiOutlinedInput': {
 						borderColor: theme.vars.palette.neutral.dark,
 					},
 					...theme.applyStyles('dark', {
-						'& .MuiOutlinedInput-notchedOutline': {
+						'& .MuiOutlinedInput': {
 							borderColor: theme.vars.palette.neutral.main,
 						},
-						'&:hover .MuiOutlinedInput-notchedOutline': {
+						'&:hover .MuiOutlinedInput': {
 							borderColor: theme.vars.palette.neutral.light,
 						},
 						'&.Mui-focused .MuiOutlinedInput-notchedOutline': {

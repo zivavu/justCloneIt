@@ -1,8 +1,8 @@
 'use client';
 
-import { GreyIconSwitch } from '@/components/atoms/IconSwitch/GreyIconSwitch';
 import { DarkMode, Sunny } from '@mui/icons-material';
 import { useColorScheme, useTheme } from '@mui/material';
+import { StyledThemeSwitch } from './styles';
 
 export function ThemeSwitch() {
 	const theme = useTheme();
@@ -10,7 +10,7 @@ export function ThemeSwitch() {
 
 	if (!mode) return null;
 	return (
-		<GreyIconSwitch
+		<StyledThemeSwitch
 			checked={mode === 'dark'}
 			onChange={() => setMode(mode === 'dark' ? 'light' : 'dark')}
 			icon={

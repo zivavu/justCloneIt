@@ -28,6 +28,7 @@ declare module '@mui/material/Chip' {
 export const lightPalette: PaletteOptions = {
 	primary: {
 		main: '#f23d7b',
+		dark: '#b22c5b',
 	},
 	secondary: {
 		main: '#f06292',
@@ -51,6 +52,7 @@ export const lightPalette: PaletteOptions = {
 export const darkPalette: PaletteOptions = {
 	primary: {
 		main: '#f06292',
+		dark: '#ad1457',
 	},
 	secondary: {
 		main: '#f23d7b',

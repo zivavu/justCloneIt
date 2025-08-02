@@ -42,13 +42,26 @@ export const theme = createTheme({
 				}),
 			},
 		},
+		MuiCheckbox: {
+			defaultProps: { disableRipple: true },
+			styleOverrides: {
+				root: ({ theme }) => ({
+					borderRadius: '8px',
+					padding: '0',
+				}),
+			},
+		},
 		MuiOutlinedInput: {
 			defaultProps: { size: 'small' },
 			styleOverrides: {
 				root: ({ theme }) => ({
+					height: '48px',
+					fontSize: '14px',
+
 					'& .MuiOutlinedInput-notchedOutline': {
 						borderColor: theme.vars.palette.neutral.main,
 						transition: 'border-color 0.2s ease-in-out',
+						borderRadius: '12px',
 					},
 					'&:hover .MuiOutlinedInput-notchedOutline': {
 						borderColor: theme.vars.palette.neutral.dark,

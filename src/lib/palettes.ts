@@ -63,7 +63,7 @@ export const darkPalette: PaletteOptions = {
 		primary: 'rgb(224, 224, 224)',
 		secondary: 'rgb(189, 189, 189)',
 	},
-	divider: '#393939',
+	divider: '#454545',
 	neutral: {
 		main: '#454545',
 		dark: '#0e0e0e',

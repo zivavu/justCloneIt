@@ -19,9 +19,19 @@ export function FiltersSidebar() {
 	const theme = useTheme();
 
 	return (
-		<Stack width={320} spacing={3}>
-			<Accordion square component={Stack}>
-				<AccordionSummary expandIcon={<KeyboardArrowDown />}>
+		<Stack minWidth={320} spacing={3}>
+			<Accordion
+				square
+				component={Stack}
+				disableGutters
+				defaultExpanded
+				sx={{ ...theme.applyStyles('dark', { border: `1px solid #111111` }) }}>
+				<AccordionSummary
+					expandIcon={
+						<KeyboardArrowDown
+							sx={{ color: theme.vars?.palette.text.disabled }}
+						/>
+					}>
 					<Typography variant="body2" color="textSecondary">
 						Earnings
 					</Typography>
@@ -30,9 +40,9 @@ export function FiltersSidebar() {
 					sx={{
 						display: 'flex',
 						flexDirection: 'column',
-						gap: theme.spacing(2),
+						gap: 3,
 					}}>
-					<Divider sx={{ marginTop: -2 }} />
+					<Divider sx={{ marginTop: -0.5 }} />
 					<Stack direction="row" spacing={2} alignItems="center">
 						<PrimarySwitch
 							slots={{ thumb: AttachMoney }}
@@ -50,10 +60,21 @@ export function FiltersSidebar() {
 				<Accordion
 					square
 					disableGutters
+					defaultExpanded
 					key={filter.value}
 					component={Stack}
-					sx={{ '&::before': { content: 'none' } }}>
-					<AccordionSummary expandIcon={<KeyboardArrowDown />}>
+					sx={{
+						'&::before': {
+							content: 'none',
+						},
+						...theme.applyStyles('dark', { border: `1px solid #111111` }),
+					}}>
+					<AccordionSummary
+						expandIcon={
+							<KeyboardArrowDown
+								sx={{ color: theme.vars?.palette.text.disabled }}
+							/>
+						}>
 						<Typography variant="body2" color="textSecondary">
 							{filter.label}
 						</Typography>
@@ -61,7 +82,7 @@ export function FiltersSidebar() {
 
 					<AccordionDetails
 						sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-						<Divider sx={{ marginTop: -2, marginBottom: 1 }} />
+						<Divider sx={{ marginTop: -0.5, marginBottom: 1 }} />
 						{filter.options.map((option) => (
 							<Stack
 								key={option.value}

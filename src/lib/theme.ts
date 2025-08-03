@@ -32,6 +32,7 @@ export const theme = createTheme({
 		MuiButton: {
 			styleOverrides: {
 				root: {
+					borderRadius: '100px',
 					textTransform: 'none',
 				},
 				outlined: ({ theme }) => ({

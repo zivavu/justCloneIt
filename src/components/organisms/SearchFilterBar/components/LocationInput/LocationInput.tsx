@@ -224,7 +224,7 @@ export function LocationInput() {
 						variant="contained"
 						size="large"
 						color="primary"
-						sx={{ borderRadius: '50px', ml: 'auto', px: 4 }}>
+						sx={{ ml: 'auto', px: 4 }}>
 						<Typography variant="subtitle2">Show offers</Typography>
 					</Button>
 				</Stack>

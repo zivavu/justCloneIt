@@ -13,7 +13,8 @@ export const workModes: valueLabel[] = [
 		value: 'office',
 		label: 'Office',
 	},
-];
+] as const;
+
 export const contractTypes: valueLabel[] = [
 	{
 		value: 'b2b',

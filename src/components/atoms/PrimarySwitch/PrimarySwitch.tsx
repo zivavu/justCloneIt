@@ -52,5 +52,8 @@ export const PrimarySwitch = styled((props: SwitchProps) => (
 		borderRadius: '26px',
 		backgroundColor: theme.vars?.palette.neutral.main,
 		opacity: 1,
+		...theme.applyStyles('dark', {
+			backgroundColor: '#525252',
+		}),
 	},
 }));

@@ -19,7 +19,7 @@ export function FiltersSidebar() {
 	const theme = useTheme();
 
 	return (
-		<Stack minWidth={320} spacing={3}>
+		<Stack minWidth={320} spacing={3} mt={0.5}>
 			<Accordion
 				square
 				component={Stack}

@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<Stack>
 			<SearchFilterBar />
-			<Stack direction="row" p={1.5} gap={3} justifyContent="center">
+			<Stack direction="row" p={1} gap={3} justifyContent="center">
 				<FiltersSidebar />
 				<OffersList />
 			</Stack>

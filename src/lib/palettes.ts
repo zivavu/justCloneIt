@@ -11,6 +11,10 @@ declare module '@mui/material/styles' {
 	interface PaletteOptions {
 		neutral?: PaletteColorOptions;
 	}
+
+	interface TypeBackground {
+		dark: string;
+	}
 }
 
 declare module '@mui/material/Button' {
@@ -36,6 +40,7 @@ export const lightPalette: PaletteOptions = {
 	background: {
 		default: '#f3f6f8',
 		paper: '#ffffff',
+		dark: '#f3f6f8',
 	},
 	text: {
 		primary: '#000000',
@@ -60,6 +65,7 @@ export const darkPalette: PaletteOptions = {
 	background: {
 		default: '#202020',
 		paper: '#2c2c2c',
+		dark: '#111111',
 	},
 	text: {
 		primary: 'rgb(224, 224, 224)',

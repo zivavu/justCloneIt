@@ -61,7 +61,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
       `,
 		company: 'Innovate Solutions PL',
 		location: {
-			city: 'Remote (Poland)',
+			city: 'Warsaw',
 			lat: 52.2297, // Warsaw center, slightly offset
 			lon: 21.0122,
 		},
@@ -232,7 +232,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
       `,
 		company: 'CloudCore Systems PL',
 		location: {
-			city: 'Remote (Poland)',
+			city: 'Poznań',
 			lat: 51.1079 - 0.002,
 			lon: 17.0385 + 0.007,
 		},
@@ -736,7 +736,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
       `,
 		company: 'E-Commerce Titans',
 		location: {
-			city: 'Remote (Poland)',
+			city: 'Katowice',
 			lat: 50.0496, // Katowice center, slightly offset
 			lon: 19.0207,
 		},
@@ -901,7 +901,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
       `,
 		company: 'SecureCloud Solutions',
 		location: {
-			city: 'Remote (Poland)',
+			city: 'Katowice',
 			lat: 50.0496 + 0.001, // Katowice, slightly offset
 			lon: 19.0207 - 0.003,
 		},
@@ -1177,7 +1177,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
       `,
 		company: 'Global Web Solutions',
 		location: {
-			city: 'Remote (Poland)',
+			city: 'Szczecin',
 			lat: 53.4289, // Szczecin, slightly offset
 			lon: 14.553,
 		},
@@ -1343,7 +1343,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
       `,
 		company: 'Code Crafters PL',
 		location: {
-			city: 'Remote (Wrocław)',
+			city: 'Wrocław',
 			lat: 51.1079 + 0.009,
 			lon: 17.0385 + 0.004,
 		},
@@ -1565,7 +1565,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
       `,
 		company: 'Automation Gurus',
 		location: {
-			city: 'Remote (Poland)',
+			city: 'Łódź',
 			lat: 51.7592, // Łódź, slightly offset
 			lon: 19.4559,
 		},
@@ -1731,7 +1731,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
       `,
 		company: 'Decentralized Future',
 		location: {
-			city: 'Remote (Poland)',
+			city: 'Kraków',
 			lat: 50.0614, // Kraków, slightly offset
 			lon: 19.9365,
 		},
@@ -1899,7 +1899,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
       `,
 		company: 'DocuSense',
 		location: {
-			city: 'Remote (Poland)',
+			city: 'Katowice',
 			lat: 50.2649, // Katowice, slightly offset
 			lon: 19.0122,
 		},

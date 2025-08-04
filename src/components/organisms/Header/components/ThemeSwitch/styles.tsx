@@ -13,7 +13,7 @@ export const StyledThemeSwitch = styled((props: SwitchProps) => (
 			transform: 'translateX(24px)',
 			color: '#fff',
 			'& + .MuiSwitch-track': {
-				backgroundColor: theme?.vars?.palette.background.default,
+				backgroundColor: theme?.vars?.palette.background.dark,
 				opacity: 1,
 			},
 			'&.Mui-disabled + .MuiSwitch-track': {
@@ -48,5 +48,8 @@ export const StyledThemeSwitch = styled((props: SwitchProps) => (
 		borderRadius: '26px',
 		backgroundColor: theme.vars?.palette.background.default,
 		opacity: 1,
+	},
+	'& .MuiSvgIcon-root': {
+		boxSizing: 'content-box !important',
 	},
 }));

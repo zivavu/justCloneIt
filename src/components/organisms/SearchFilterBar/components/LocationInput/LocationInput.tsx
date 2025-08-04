@@ -3,7 +3,7 @@
 import {
 	ExpandMore,
 	KeyboardArrowDown,
-	LocationOnOutlined,
+	PlaceOutlined,
 	Search,
 } from '@mui/icons-material';
 import {
@@ -49,6 +49,7 @@ export function LocationInput() {
 				<Stack
 					direction="row"
 					spacing={1}
+					alignItems="center"
 					sx={{
 						'& > *': {
 							color: choosenLocation
@@ -56,8 +57,8 @@ export function LocationInput() {
 								: theme.vars?.palette.text.secondary,
 						},
 					}}>
-					<LocationOnOutlined />
-					<Typography variant="subtitle2" whiteSpace="nowrap">
+					<PlaceOutlined />
+					<Typography variant="subtitle2" fontSize={13} whiteSpace="nowrap">
 						{choosenLocation?.label || 'Location'}
 					</Typography>
 					<ExpandMore />

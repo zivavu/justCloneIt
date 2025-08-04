@@ -98,8 +98,9 @@ export function SkillAutocomplete() {
 							sx: {
 								height: '40px',
 								borderRadius: '50px',
-								backgroundColor: theme.vars?.palette.background.default,
-								fontSize: '0.875rem',
+								backgroundColor: theme.vars?.palette.background.dark,
+								fontSize: '13px',
+								letterSpacing: '0.1px',
 								color: theme.vars?.palette.text.secondary,
 							},
 							placeholder: 'Search',

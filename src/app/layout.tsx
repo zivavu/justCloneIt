@@ -6,7 +6,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import { Open_Sans } from 'next/font/google';
 
 import './globals.css';
-import dayjs from 'dayjs';
 
 const openSans = Open_Sans({
 	weight: ['300', '400', '500', '600', '700'],

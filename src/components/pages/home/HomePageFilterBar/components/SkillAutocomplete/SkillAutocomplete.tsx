@@ -14,7 +14,7 @@ import {
 import { CommonProps } from '@mui/material/OverridableComponent';
 import { DetailedHTMLProps, HTMLAttributes, useState } from 'react';
 import { mockOptions, valueLabel } from '../../mockOptions';
-import { StyledChip, StyledPopperListItem } from './style';
+import { StyledChip, StyledPopperListItem } from './styles';
 
 export type SkillAutocompleteProps = PaperOwnProps &
 	CommonProps &

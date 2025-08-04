@@ -3,14 +3,10 @@
 import { ArrowBack, KeyboardArrowRight } from '@mui/icons-material';
 import { Stack, useTheme } from '@mui/material';
 import Link from 'next/link';
-import { JobOffeer } from '../../home/OffersList/mockOffers';
-import { StyledLink } from './style';
+import { JobOfferComponentProps } from '../types';
+import { StyledLink } from './styles';
 
-interface TopBarProps {
-	offer: JobOffeer | undefined;
-}
-
-export function TopBar({ offer }: TopBarProps) {
+export function TopBar({ offer }: JobOfferComponentProps) {
 	const theme = useTheme();
 
 	return (

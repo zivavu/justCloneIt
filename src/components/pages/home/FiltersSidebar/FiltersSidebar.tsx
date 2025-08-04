@@ -13,13 +13,20 @@ import {
 	Typography,
 	useTheme,
 } from '@mui/material';
+import { TOP_OFFSET } from '../const';
 import { sidebarFilters } from './filterCategories';
 
 export function FiltersSidebar() {
 	const theme = useTheme();
 
 	return (
-		<Stack minWidth={320} spacing={3} mt={0.5}>
+		<Stack
+			minWidth={320}
+			spacing={3}
+			position={'sticky'}
+			height={`calc(100vh - ${TOP_OFFSET}px)`}
+			py={1.5}
+			sx={{ overflowY: 'auto' }}>
 			<Accordion
 				square
 				component={Stack}

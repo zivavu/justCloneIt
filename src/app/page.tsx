@@ -5,9 +5,9 @@ import { Stack } from '@mui/material';
 
 export default function HomePage() {
 	return (
-		<Stack>
+		<Stack sx={{ position: 'relative' }}>
 			<HomePageFilterBar />
-			<Stack direction="row" p={1} gap={3} justifyContent="center">
+			<Stack direction="row" gap={3} justifyContent="center">
 				<FiltersSidebar />
 				<OffersList />
 			</Stack>

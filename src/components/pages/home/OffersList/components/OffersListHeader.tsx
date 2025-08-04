@@ -57,7 +57,15 @@ export function OffersListHeader() {
 	}
 
 	return (
-		<Stack direction="row" justifyContent="space-between" alignItems="center">
+		<Stack
+			direction="row"
+			justifyContent="space-between"
+			alignItems="center"
+			position={'sticky'}
+			top={0}
+			pt={1.5}
+			zIndex={100}
+			bgcolor={theme.vars?.palette.background.default}>
 			<Typography variant="subtitle2" color="textSecondary">
 				Job offers
 			</Typography>

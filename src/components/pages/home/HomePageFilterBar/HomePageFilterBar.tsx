@@ -5,7 +5,7 @@ import { SkillAutocomplete } from './components/SkillAutocomplete/SkillAutocompl
 import { TechnologiesFilterBar } from './components/TechnologiesFilterBar/TechnologiesFilterBar';
 import { StyledRoot } from './style';
 
-export function SearchFilterBar() {
+export function HomePageFilterBar() {
 	return (
 		<StyledRoot>
 			<SkillAutocomplete />

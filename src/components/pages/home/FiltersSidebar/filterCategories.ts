@@ -1,4 +1,4 @@
-import { valueLabel } from '../SearchFilterBar/mockOptions';
+import { valueLabel } from '../../pages/home/HomePageFilterBar/mockOptions';
 
 export const workModes: valueLabel[] = [
 	{

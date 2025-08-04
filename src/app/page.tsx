@@ -1,12 +1,12 @@
-import { FiltersSidebar } from '@/components/organisms/FiltersSidebar/FiltersSidebar';
-import { OffersList } from '@/components/organisms/OffersList/OffersList';
-import { SearchFilterBar } from '@/components/organisms/SearchFilterBar/SearchFilterBar';
+import { FiltersSidebar } from '@/components/pages/home/FiltersSidebar/FiltersSidebar';
+import { HomePageFilterBar } from '@/components/pages/home/HomePageFilterBar/HomePageFilterBar';
+import { OffersList } from '@/components/pages/home/OffersList/OffersList';
 import { Stack } from '@mui/material';
 
-export default function Home() {
+export default function HomePage() {
 	return (
 		<Stack>
-			<SearchFilterBar />
+			<HomePageFilterBar />
 			<Stack direction="row" p={1} gap={3} justifyContent="center">
 				<FiltersSidebar />
 				<OffersList />

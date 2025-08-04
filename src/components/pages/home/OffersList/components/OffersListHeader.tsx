@@ -15,7 +15,7 @@ import {
 	useTheme,
 } from '@mui/material';
 import { useState } from 'react';
-import { valueLabel } from '../../SearchFilterBar/mockOptions';
+import { valueLabel } from '../../HomePageFilterBar/mockOptions';
 
 const MENU_OPTIONS: valueLabel[] = [
 	{

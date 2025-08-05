@@ -1,5 +1,6 @@
 import { MOCK_OFFERS } from '@/components/pages/home/OffersList/mockOffers';
 import { OfferHeader } from '@/components/pages/job-offer/OfferHeader/OfferHeader';
+import { OfferTechStack } from '@/components/pages/job-offer/OfferTechStack/OfferTechStack';
 import { TopBar } from '@/components/pages/job-offer/TopBar/TopBar';
 import { Stack, Typography } from '@mui/material';
 
@@ -16,8 +17,9 @@ export default async function JobOfferPage({
 		<Stack>
 			<TopBar offer={offer} />
 			<Stack direction={'row'} pr={0.5} pl={1} width="100%">
-				<Stack flex={5} pl={1} pr={2}>
+				<Stack flex={5} pl={1} pr={2} gap={3}>
 					<OfferHeader offer={offer} />
+					<OfferTechStack offer={offer} />
 				</Stack>
 				<Stack style={{ flex: 4 }}>
 					<Typography>MAP MPA MPA</Typography>

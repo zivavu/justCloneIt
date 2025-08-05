@@ -67,9 +67,8 @@ export function OfferHeader({ offer }: JobOfferComponentProps) {
 					p: theme.spacing(4, 3),
 					gap: 3,
 					backgroundImage: `linear-gradient(to right, ${theme.vars?.palette.primary.main}, ${theme.vars?.palette.primary.dark})`,
-					borderRadius: theme.spacing(0.75),
-					borderBottomLeftRadius: 0,
-					borderBottomRightRadius: 0,
+					borderTopRightRadius: theme.spacing(0.75),
+					borderTopLeftRadius: theme.spacing(0.75),
 				}}>
 				<Stack
 					sx={{
@@ -142,6 +141,10 @@ export function OfferHeader({ offer }: JobOfferComponentProps) {
 							key={label}>
 							<Stack
 								sx={{
+									height: 48,
+									width: 48,
+									alignItems: 'center',
+									justifyContent: 'center',
 									p: 1.5,
 									backgroundColor,
 									color,

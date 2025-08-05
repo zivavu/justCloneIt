@@ -11,13 +11,15 @@ export function TopBar({ offer }: JobOfferComponentProps) {
 
 	return (
 		<Stack
-			direction="row"
-			gap={1}
-			height={88}
-			bgcolor={theme.vars?.palette.background.paper}
-			alignItems={'center'}
-			px={4}
-			color={theme.vars?.palette.text.secondary}>
+			sx={{
+				flexDirection: 'row',
+				gap: 1,
+				height: 88,
+				bgcolor: theme.vars?.palette.background.paper,
+				alignItems: 'center',
+				px: 4,
+				color: theme.vars?.palette.text.secondary,
+			}}>
 			<Link
 				href={'/job-offers'}
 				style={{ height: '24px', marginRight: theme.spacing(2) }}>

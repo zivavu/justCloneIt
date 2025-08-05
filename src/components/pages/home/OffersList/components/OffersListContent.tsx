@@ -1,7 +1,7 @@
 'use client';
 
 import {
-	Apartment,
+	ApartmentRounded,
 	BookmarkBorderOutlined,
 	PlaceOutlined,
 	ShareLocationOutlined,
@@ -17,7 +17,7 @@ export function OffersListContent() {
 
 	const currentDate = dayjs(new Date());
 	return (
-		<Stack gap={1.5} py={1}>
+		<Stack gap={1.5}>
 			{MOCK_OFFERS.map((offer) => (
 				<Link href={`job-offer/${offer.slug}`} key={offer.slug}>
 					<Stack
@@ -47,7 +47,7 @@ export function OffersListContent() {
 							</Typography>
 							<Stack direction="row" gap={2}>
 								<Stack direction="row" gap={1}>
-									<Apartment fontSize="small" />
+									<ApartmentRounded fontSize="small" />
 									<Typography variant="caption" fontWeight={400}>
 										{offer.company}
 									</Typography>

@@ -63,7 +63,8 @@ export function OffersListHeader() {
 			alignItems="center"
 			position={'sticky'}
 			top={0}
-			pt={1.5}
+			py={1}
+			pr={0.5}
 			zIndex={100}
 			bgcolor={theme.vars?.palette.background.default}>
 			<Typography variant="subtitle2" color="textSecondary">

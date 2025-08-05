@@ -5,7 +5,7 @@ export function Logo() {
 	const theme = useTheme();
 
 	return (
-		<Link href={'/job-offers'}>
+		<Link href={'/job-offers'} style={{ height: '24px' }}>
 			<svg
 				id="Warstwa_1"
 				data-name="Warstwa 1"

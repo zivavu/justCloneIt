@@ -56,7 +56,7 @@ export const theme = createTheme({
 			defaultProps: { size: 'small' },
 			styleOverrides: {
 				root: ({ theme }) => ({
-					height: '48px',
+					minHeight: '48px',
 					fontSize: '14px',
 					borderColor: theme.vars.palette.neutral.main,
 					transition: 'border-color 0.2s ease-in-out',
@@ -97,6 +97,18 @@ export const theme = createTheme({
 				root: {
 					borderRadius: '1.25rem',
 				},
+			},
+		},
+		MuiFormLabel: {
+			styleOverrides: {
+				root: ({ theme }) => ({
+					fontSize: '0.875rem',
+					marginBottom: '4px',
+					color: theme.vars.palette.text.primary,
+					'&.Mui-focused': {
+						color: theme.vars.palette.text.primary,
+					},
+				}),
 			},
 		},
 	},

@@ -29,9 +29,10 @@ export function OfferDescription({ offer }: JobOfferComponentProps) {
 				bgcolor: theme.vars?.palette.background.paper,
 				p: theme.spacing(3),
 				maxWidth: '1000px',
-			}}
-			gap={1.5}>
-			<Typography variant="h5">Description</Typography>
+				borderRadius: theme.spacing(0.75),
+				gap: 1.5,
+			}}>
+			<Typography variant="h5">Job description</Typography>
 
 			<Box sx={{ fontWeight: 400 }}>
 				<Markdown

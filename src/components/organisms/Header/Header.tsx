@@ -6,8 +6,6 @@ import { Nav } from './components/Nav/Nav';
 import { ThemeSwitch } from './components/ThemeSwitch/ThemeSwitch';
 import { StyledHeader } from './styles';
 
-export const HeaderHeight = 64;
-
 export function Header() {
 	return (
 		<StyledHeader>

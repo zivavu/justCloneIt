@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import { HeaderHeight } from './Header';
+export const HeaderHeight = 64;
 
 export const StyledHeader = styled('header')(({ theme }) => ({
 	display: 'flex',

@@ -1,10 +1,11 @@
 import { MOCK_OFFERS } from '@/components/pages/home/OffersList/mockOffers';
 import { ApplyForJob } from '@/components/pages/job-offer/ApplyForJob/ApplyForJob';
+import JobOffersMap from '@/components/pages/job-offer/JobOffersMap/JobOffersMap';
 import { OfferDescription } from '@/components/pages/job-offer/OfferDescription/OfferDescription';
 import { OfferHeader } from '@/components/pages/job-offer/OfferHeader/OfferHeader';
 import { OfferTechStack } from '@/components/pages/job-offer/OfferTechStack/OfferTechStack';
 import { TopBar } from '@/components/pages/job-offer/TopBar/TopBar';
-import { Stack, Typography } from '@mui/material';
+import { Stack } from '@mui/material';
 
 export default async function JobOfferPage({
 	params,
@@ -16,7 +17,7 @@ export default async function JobOfferPage({
 	const offer = MOCK_OFFERS.find((offer) => offer.slug === slug);
 
 	return (
-		<Stack>
+		<Stack position="relative">
 			<TopBar offer={offer} />
 			<Stack direction={'row'} pr={0.5} pl={1} width="100%">
 				<Stack flex={5} pl={1} pr={2} pb={2} gap={3}>
@@ -25,8 +26,8 @@ export default async function JobOfferPage({
 					<OfferDescription offer={offer} />
 					<ApplyForJob offer={offer} />
 				</Stack>
-				<Stack style={{ flex: 4 }}>
-					<Typography>MAP MPA MPA</Typography>
+				<Stack style={{ flex: 4, height: 'min-content' }}>
+					<JobOffersMap />
 				</Stack>
 			</Stack>
 		</Stack>

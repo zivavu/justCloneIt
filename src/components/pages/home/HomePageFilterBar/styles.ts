@@ -1,4 +1,4 @@
-import { HeaderHeight } from '@/components/organisms/Header/Header';
+import { HeaderHeight } from '@/components/organisms/Header/styles';
 import { Stack, styled } from '@mui/material';
 
 export const FilterBarHeight = 88;

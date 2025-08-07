@@ -1,25 +1,16 @@
 'use client';
 
 import { ArrowBack, KeyboardArrowRight } from '@mui/icons-material';
-import { Stack, useTheme } from '@mui/material';
+import { useTheme } from '@mui/material';
 import Link from 'next/link';
 import { JobOfferComponentProps } from '../types';
-import { StyledLink } from './styles';
+import { StyledLink, StyledRoot } from './styles';
 
 export function TopBar({ offer }: JobOfferComponentProps) {
 	const theme = useTheme();
 
 	return (
-		<Stack
-			sx={{
-				flexDirection: 'row',
-				gap: 1,
-				height: 88,
-				bgcolor: theme.vars?.palette.background.paper,
-				alignItems: 'center',
-				px: 4,
-				color: theme.vars?.palette.text.secondary,
-			}}>
+		<StyledRoot>
 			<Link
 				href={'/job-offers'}
 				style={{ height: '24px', marginRight: theme.spacing(2) }}>
@@ -34,6 +25,6 @@ export function TopBar({ offer }: JobOfferComponentProps) {
 			</StyledLink>
 			<KeyboardArrowRight />
 			<StyledLink href={'/job-offers'}>{offer?.title}</StyledLink>
-		</Stack>
+		</StyledRoot>
 	);
 }

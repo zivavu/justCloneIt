@@ -4,6 +4,7 @@ import { Stack } from '@mui/material';
 import { TOP_OFFSET } from '../const';
 import { OffersListContent } from './components/OffersListContent';
 import { OffersListHeader } from './components/OffersListHeader';
+import { MOCK_OFFERS } from './mockOffers';
 
 export function OffersList() {
 	return (
@@ -15,7 +16,7 @@ export function OffersList() {
 			sx={{ overflowY: 'auto' }}>
 			<OffersListHeader />
 
-			<OffersListContent />
+			<OffersListContent offers={MOCK_OFFERS} />
 		</Stack>
 	);
 }

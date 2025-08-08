@@ -5,13 +5,16 @@ import '@maptiler/sdk/dist/maptiler-sdk.css';
 import { Box } from '@mui/material';
 import { useEffect, useRef } from 'react';
 import { TOP_OFFSET } from '../../home/const';
+import { JobOfferComponentProps } from '../types';
 
 const MAPTILER_API_KEY = process.env.NEXT_PUBLIC_MAPTILER_API_KEY;
-export function JobOffersMap() {
+export function JobOffersMap({ offer }: JobOfferComponentProps) {
 	console.log('MAPTILER_API_KEY', MAPTILER_API_KEY);
 	const mapContainer = useRef<HTMLDivElement>(null);
 	const map = useRef<maptilersdk.Map>(null);
-	const poznan = { lng: 16.933, lat: 52.409538 };
+
+	if (!offer) return null;
+	const softwareHouseLocation = offer?.location;
 
 	const zoom = 14;
 	if (!MAPTILER_API_KEY) return <div>Provide a Maptiler API key</div>;
@@ -24,10 +27,10 @@ export function JobOffersMap() {
 		map.current = new maptilersdk.Map({
 			container: mapContainer.current,
 			style: maptilersdk.MapStyle.STREETS,
-			center: [poznan.lng, poznan.lat],
+			center: [softwareHouseLocation.lng, softwareHouseLocation.lat],
 			zoom: zoom,
 		});
-	}, [poznan.lng, poznan.lat, zoom]);
+	}, [softwareHouseLocation.lng, softwareHouseLocation.lat, zoom]);
 
 	return (
 		<Box

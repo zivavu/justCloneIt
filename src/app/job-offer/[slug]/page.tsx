@@ -4,6 +4,7 @@ import { JobOffersMap } from '@/components/pages/job-offer/JobOffersMap/JobOffer
 import { OfferDescription } from '@/components/pages/job-offer/OfferDescription/OfferDescription';
 import { OfferHeader } from '@/components/pages/job-offer/OfferHeader/OfferHeader';
 import { OfferTechStack } from '@/components/pages/job-offer/OfferTechStack/OfferTechStack';
+import { SimilarOffers } from '@/components/pages/job-offer/SimilarOffers/SimilarOffers';
 import { TopBar } from '@/components/pages/job-offer/TopBar/TopBar';
 import { Stack } from '@mui/material';
 
@@ -25,9 +26,10 @@ export default async function JobOfferPage({
 					<OfferTechStack offer={offer} />
 					<OfferDescription offer={offer} />
 					<ApplyForJob offer={offer} />
+					<SimilarOffers />
 				</Stack>
 				<Stack style={{ flex: 4 }}>
-					<JobOffersMap />
+					<JobOffersMap offer={offer} />
 				</Stack>
 			</Stack>
 		</>

@@ -12,7 +12,7 @@ export interface JobOffeer {
 	location: {
 		city: string;
 		lat: number;
-		lon: number;
+		lng: number;
 	};
 	logo: string;
 	salary: {
@@ -63,7 +63,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297, // Warsaw center, slightly offset
-			lon: 21.0122,
+			lng: 21.0122,
 		},
 		logo: '/logos/innovate-solutions.png',
 		salary: {
@@ -119,7 +119,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Kraków',
 			lat: 50.0614 + 0.005,
-			lon: 19.9365 - 0.003,
+			lng: 19.9365 - 0.003,
 		},
 		logo: '/logos/technexus.png',
 		salary: {
@@ -175,7 +175,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 + 0.008,
-			lon: 21.0122 + 0.005,
+			lng: 21.0122 + 0.005,
 		},
 		logo: '/logos/global-tech.png',
 		salary: {
@@ -234,7 +234,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Poznań',
 			lat: 51.1079 - 0.002,
-			lon: 17.0385 + 0.007,
+			lng: 17.0385 + 0.007,
 		},
 		logo: '/logos/cloudcore-systems.png',
 		salary: {
@@ -292,7 +292,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Gdańsk',
 			lat: 54.3721 + 0.001,
-			lon: 18.6384 - 0.004,
+			lng: 18.6384 - 0.004,
 		},
 		logo: '/logos/creative-digital.png',
 		salary: {
@@ -347,7 +347,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Wrocław',
 			lat: 51.1079 + 0.003,
-			lon: 17.0385 - 0.005,
+			lng: 17.0385 - 0.005,
 		},
 		logo: '/logos/quality-first.png',
 		salary: {
@@ -402,7 +402,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Poznań',
 			lat: 52.4064 + 0.004,
-			lon: 16.9252 - 0.002,
+			lng: 16.9252 - 0.002,
 		},
 		logo: '/logos/insight-analytics.png',
 		salary: {
@@ -459,7 +459,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 - 0.006,
-			lon: 21.0122 + 0.003,
+			lng: 21.0122 + 0.003,
 		},
 		logo: '/logos/fintech-innovations.png',
 		salary: {
@@ -516,7 +516,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Kraków',
 			lat: 50.0614 - 0.007,
-			lon: 19.9365 + 0.001,
+			lng: 19.9365 + 0.001,
 		},
 		logo: '/logos/mobile-solutions.png',
 		salary: {
@@ -571,7 +571,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Poznań',
 			lat: 52.4064 - 0.003,
-			lon: 16.9252 + 0.006,
+			lng: 16.9252 + 0.006,
 		},
 		logo: '/logos/cloudscape-architects.png',
 		salary: {
@@ -627,7 +627,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Gdańsk',
 			lat: 54.3721 - 0.005, // Gdańsk center, slightly offset
-			lon: 18.6384 + 0.002,
+			lng: 18.6384 + 0.002,
 		},
 		logo: '/logos/enterprise-software.png',
 		salary: {
@@ -682,7 +682,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 + 0.01,
-			lon: 21.0122 - 0.005,
+			lng: 21.0122 - 0.005,
 		},
 		logo: '/logos/mobilefirst.png',
 		salary: {
@@ -738,7 +738,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Katowice',
 			lat: 50.0496, // Katowice center, slightly offset
-			lon: 19.0207,
+			lng: 19.0207,
 		},
 		logo: '/logos/ecommerce-titans.png',
 		salary: {
@@ -793,7 +793,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Wrocław',
 			lat: 51.1079 - 0.004,
-			lon: 17.0385 + 0.002,
+			lng: 17.0385 + 0.002,
 		},
 		logo: '/logos/data-processors.png',
 		salary: {
@@ -847,7 +847,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Łódź',
 			lat: 51.7592 + 0.003,
-			lon: 19.4559 - 0.001,
+			lng: 19.4559 - 0.001,
 		},
 		logo: '/logos/fullstack-innovators.png',
 		salary: {
@@ -903,7 +903,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Katowice',
 			lat: 50.0496 + 0.001, // Katowice, slightly offset
-			lon: 19.0207 - 0.003,
+			lng: 19.0207 - 0.003,
 		},
 		logo: '/logos/securecloud.png',
 		salary: {
@@ -958,7 +958,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Poznań',
 			lat: 52.4064 + 0.006,
-			lon: 16.9252 + 0.003,
+			lng: 16.9252 + 0.003,
 		},
 		logo: '/logos/playforge.png',
 		salary: {
@@ -1011,7 +1011,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Kraków',
 			lat: 50.0614 + 0.002,
-			lon: 19.9365 + 0.006,
+			lng: 19.9365 + 0.006,
 		},
 		logo: '/logos/webinnovators.png',
 		salary: {
@@ -1068,7 +1068,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 - 0.009,
-			lon: 21.0122 + 0.007,
+			lng: 21.0122 + 0.007,
 		},
 		logo: '/logos/it-backbone.png',
 		salary: {
@@ -1123,7 +1123,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Gdańsk',
 			lat: 54.3721 + 0.008,
-			lon: 18.6384 - 0.001,
+			lng: 18.6384 - 0.001,
 		},
 		logo: '/logos/ai-innovations.png',
 		salary: {
@@ -1179,7 +1179,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Szczecin',
 			lat: 53.4289, // Szczecin, slightly offset
-			lon: 14.553,
+			lng: 14.553,
 		},
 		logo: '/logos/global-web.png',
 		salary: {
@@ -1234,7 +1234,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 + 0.007,
-			lon: 21.0122 + 0.009,
+			lng: 21.0122 + 0.009,
 		},
 		logo: '/logos/embedded-tech.png',
 		salary: {
@@ -1289,7 +1289,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Kraków',
 			lat: 50.0614 + 0.009,
-			lon: 19.9365 - 0.008,
+			lng: 19.9365 - 0.008,
 		},
 		logo: '/logos/product-visionaries.png',
 		salary: {
@@ -1345,7 +1345,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Wrocław',
 			lat: 51.1079 + 0.009,
-			lon: 17.0385 + 0.004,
+			lng: 17.0385 + 0.004,
 		},
 		logo: '/logos/codecrafters.png',
 		salary: {
@@ -1400,7 +1400,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Łódź',
 			lat: 51.7592 - 0.005,
-			lon: 19.4559 + 0.004,
+			lng: 19.4559 + 0.004,
 		},
 		logo: '/logos/angular-lab.png',
 		salary: {
@@ -1456,7 +1456,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 + 0.002,
-			lon: 21.0122 - 0.008,
+			lng: 21.0122 - 0.008,
 		},
 		logo: '/logos/apple-enthusiasts.png',
 		salary: {
@@ -1512,7 +1512,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Poznań',
 			lat: 52.4064 - 0.001,
-			lon: 16.9252 - 0.007,
+			lng: 16.9252 - 0.007,
 		},
 		logo: '/logos/securenet.png',
 		salary: {
@@ -1567,7 +1567,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Łódź',
 			lat: 51.7592, // Łódź, slightly offset
-			lon: 19.4559,
+			lng: 19.4559,
 		},
 		logo: '/logos/automation-gurus.png',
 		salary: {
@@ -1622,7 +1622,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Kraków',
 			lat: 50.0614 - 0.003,
-			lon: 19.9365 + 0.009,
+			lng: 19.9365 + 0.009,
 		},
 		logo: '/logos/gofast-systems.png',
 		salary: {
@@ -1678,7 +1678,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 - 0.004,
-			lon: 21.0122 + 0.001,
+			lng: 21.0122 + 0.001,
 		},
 		logo: '/logos/iot-innovators.png',
 		salary: {
@@ -1733,7 +1733,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Kraków',
 			lat: 50.0614, // Kraków, slightly offset
-			lon: 19.9365,
+			lng: 19.9365,
 		},
 		logo: '/logos/decentralized-future.png',
 		salary: {
@@ -1789,7 +1789,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Wrocław',
 			lat: 51.1079 - 0.007,
-			lon: 17.0385 - 0.002,
+			lng: 17.0385 - 0.002,
 		},
 		logo: '/logos/dataflow-masters.png',
 		salary: {
@@ -1845,7 +1845,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 + 0.005,
-			lon: 21.0122 - 0.003,
+			lng: 21.0122 - 0.003,
 		},
 		logo: '/logos/pixel-perfect.png',
 		salary: {
@@ -1901,7 +1901,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Katowice',
 			lat: 50.2649, // Katowice, slightly offset
-			lon: 19.0122,
+			lng: 19.0122,
 		},
 		logo: '/logos/docusense.png',
 		salary: {
@@ -1955,7 +1955,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Poznań',
 			lat: 52.4064 + 0.007,
-			lon: 16.9252 - 0.004,
+			lng: 16.9252 - 0.004,
 		},
 		logo: '/logos/datavault.png',
 		salary: {
@@ -2010,7 +2010,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 - 0.008,
-			lon: 21.0122 + 0.004,
+			lng: 21.0122 + 0.004,
 		},
 		logo: '/logos/crm-solutions.png',
 		salary: {
@@ -2066,7 +2066,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Kraków',
 			lat: 50.0614 + 0.004,
-			lon: 19.9365 - 0.001,
+			lng: 19.9365 - 0.001,
 		},
 		logo: '/logos/network-core.png',
 		salary: {
@@ -2122,7 +2122,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Remote (Poland)',
 			lat: 53.4289 - 0.005, // Szczecin, slightly offset
-			lon: 14.553 + 0.002,
+			lng: 14.553 + 0.002,
 		},
 		logo: '/logos/product-growth.png',
 		salary: {
@@ -2177,7 +2177,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 + 0.009,
-			lon: 21.0122 - 0.001,
+			lng: 21.0122 - 0.001,
 		},
 		logo: '/logos/gotech.png',
 		salary: {
@@ -2233,7 +2233,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Kraków',
 			lat: 50.0614 + 0.007,
-			lon: 19.9365 + 0.005,
+			lng: 19.9365 + 0.005,
 		},
 		logo: '/logos/securesolutions.png',
 		salary: {
@@ -2289,7 +2289,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Gdańsk',
 			lat: 54.3721 - 0.003,
-			lon: 18.6384 + 0.005,
+			lng: 18.6384 + 0.005,
 		},
 		logo: '/logos/vuejs-innovators.png',
 		salary: {
@@ -2346,7 +2346,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 + 0.006,
-			lon: 21.0122 - 0.006,
+			lng: 21.0122 - 0.006,
 		},
 		logo: '/logos/strategy-solutions.png',
 		salary: {
@@ -2402,7 +2402,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Wrocław',
 			lat: 51.1079 + 0.006,
-			lon: 17.0385 + 0.008,
+			lng: 17.0385 + 0.008,
 		},
 		logo: '/logos/future-coders.png',
 		salary: {
@@ -2458,7 +2458,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 - 0.002,
-			lon: 21.0122 + 0.006,
+			lng: 21.0122 + 0.006,
 		},
 		logo: '/logos/architech-solutions.png',
 		salary: {
@@ -2514,7 +2514,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Kraków',
 			lat: 50.0614 + 0.001,
-			lon: 19.9365 - 0.006,
+			lng: 19.9365 - 0.006,
 		},
 		logo: '/logos/react-startups.png',
 		salary: {
@@ -2570,7 +2570,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Poznań',
 			lat: 52.4064 - 0.009,
-			lon: 16.9252 + 0.001,
+			lng: 16.9252 + 0.001,
 		},
 		logo: '/logos/qa-leaders.png',
 		salary: {
@@ -2626,7 +2626,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Warsaw',
 			lat: 52.2297 + 0.003,
-			lon: 21.0122 + 0.011,
+			lng: 21.0122 + 0.011,
 		},
 		logo: '/logos/enterprise-sap.png',
 		salary: {
@@ -2682,7 +2682,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Remote (Poland)',
 			lat: 51.7592 + 0.008,
-			lon: 19.4559 - 0.006,
+			lng: 19.4559 - 0.006,
 		},
 		logo: '/logos/devops-future.png',
 		salary: {
@@ -2738,7 +2738,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Poznań',
 			lat: 52.4064 + 0.003,
-			lon: 16.9252 + 0.009,
+			lng: 16.9252 + 0.009,
 		},
 		logo: '/logos/design-first.png',
 		salary: {
@@ -2794,7 +2794,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Kraków',
 			lat: 50.0614 - 0.005,
-			lon: 19.9365 + 0.003,
+			lng: 19.9365 + 0.003,
 		},
 		logo: '/logos/customer-care.png',
 		salary: {
@@ -2850,7 +2850,7 @@ export const MOCK_OFFERS: JobOffeer[] = [
 		location: {
 			city: 'Remote (Poland)',
 			lat: 51.1079 + 0.005,
-			lon: 17.0385 - 0.008,
+			lng: 17.0385 - 0.008,
 		},
 		logo: '/logos/rails-innovators.png',
 		salary: {

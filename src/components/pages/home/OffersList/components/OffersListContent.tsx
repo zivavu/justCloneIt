@@ -10,15 +10,19 @@ import { Box, ButtonBase, Stack, Typography, useTheme } from '@mui/material';
 import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MOCK_OFFERS } from '../mockOffers';
+import { JobOffeer } from '../mockOffers';
 
-export function OffersListContent() {
+interface OffersListContentProps {
+	offers: JobOffeer[];
+}
+
+export function OffersListContent({ offers }: OffersListContentProps) {
 	const theme = useTheme();
 
 	const currentDate = dayjs(new Date());
 	return (
 		<Stack gap={1.5}>
-			{MOCK_OFFERS.map((offer) => (
+			{offers.map((offer) => (
 				<Link href={`job-offer/${offer.slug}`} key={offer.slug}>
 					<Stack
 						direction="row"

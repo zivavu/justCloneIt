@@ -7,11 +7,11 @@ import { useEffect, useRef } from 'react';
 import { TOP_OFFSET } from '../../home/const';
 
 const MAPTILER_API_KEY = process.env.NEXT_PUBLIC_MAPTILER_API_KEY;
-
-export default function JobOffersMap() {
+export function JobOffersMap() {
+	console.log('MAPTILER_API_KEY', MAPTILER_API_KEY);
 	const mapContainer = useRef<HTMLDivElement>(null);
 	const map = useRef<maptilersdk.Map>(null);
-	const tokyo = { lng: 139.753, lat: 35.6844 };
+	const poznan = { lng: 16.933, lat: 52.409538 };
 
 	const zoom = 14;
 	if (!MAPTILER_API_KEY) return <div>Provide a Maptiler API key</div>;
@@ -24,16 +24,21 @@ export default function JobOffersMap() {
 		map.current = new maptilersdk.Map({
 			container: mapContainer.current,
 			style: maptilersdk.MapStyle.STREETS,
-			center: [tokyo.lng, tokyo.lat],
+			center: [poznan.lng, poznan.lat],
 			zoom: zoom,
 		});
-	}, [tokyo.lng, tokyo.lat, zoom]);
+	}, [poznan.lng, poznan.lat, zoom]);
 
 	return (
-		<Box sx={{ position: 'sticky', top: TOP_OFFSET }}>
-			<Box sx={{ position: 'relative' }}>
+		<Box
+			sx={{
+				position: 'sticky',
+				top: TOP_OFFSET,
+				height: `calc(100vh - ${TOP_OFFSET}px)`,
+			}}>
+			<Box sx={{ position: 'relative', height: '100%', width: '100%' }}>
 				<Box
-					sx={{ position: 'absolute', width: '100%', height: '100vh' }}
+					sx={{ position: 'absolute', width: '100%', height: '100%' }}
 					ref={mapContainer}
 				/>
 			</Box>

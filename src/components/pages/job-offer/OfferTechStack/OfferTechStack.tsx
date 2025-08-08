@@ -32,7 +32,6 @@ export function OfferTechStack({ offer }: JobOfferComponentProps) {
 						</Typography>
 						<Stack direction="row" gap={1}>
 							{new Array(5).fill(0).map((v, i) => {
-								console.log('tech.level', tech.level);
 								return (
 									<Box
 										key={i}

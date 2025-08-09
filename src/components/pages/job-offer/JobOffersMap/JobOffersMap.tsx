@@ -7,9 +7,11 @@ import { useEffect, useRef } from 'react';
 import { TOP_OFFSET } from '../../home/const';
 import { JobOfferComponentProps } from '../types';
 
+const CUSTOM_STYLE_URL =
+	'https://api.maptiler.com/maps/ce102dd9-4063-4186-a993-ff95a539fca7/style.json?key=z7iGzSLh53F8TdrmZbkk';
+
 const MAPTILER_API_KEY = process.env.NEXT_PUBLIC_MAPTILER_API_KEY;
 export function JobOffersMap({ offer }: JobOfferComponentProps) {
-	console.log('MAPTILER_API_KEY', MAPTILER_API_KEY);
 	const mapContainer = useRef<HTMLDivElement>(null);
 	const map = useRef<maptilersdk.Map>(null);
 
@@ -20,18 +22,18 @@ export function JobOffersMap({ offer }: JobOfferComponentProps) {
 	if (!MAPTILER_API_KEY) return <div>Provide a Maptiler API key</div>;
 	maptilersdk.config.apiKey = MAPTILER_API_KEY;
 
+	// /maps/ce102dd9-4063-4186-a993-ff95a539fca7/style.json
 	useEffect(() => {
 		if (map.current) return;
 		if (!mapContainer.current) return;
 
 		map.current = new maptilersdk.Map({
 			container: mapContainer.current,
-			style: maptilersdk.MapStyle.STREETS,
+			style: CUSTOM_STYLE_URL,
 			center: [softwareHouseLocation.lng, softwareHouseLocation.lat],
 			zoom: zoom,
 		});
 	}, [softwareHouseLocation.lng, softwareHouseLocation.lat, zoom]);
-
 	return (
 		<Box
 			sx={{

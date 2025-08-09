@@ -20,8 +20,8 @@ export default async function JobOfferPage({
 	return (
 		<>
 			<TopBar offer={offer} />
-			<Stack direction={'row'} pr={0.5} pl={1} width="100%">
-				<Stack flex={5} pl={1} pr={2} pb={2} gap={3}>
+			<Stack direction={'row'} pr={0.5} pl={1} gap={2.5} width="100%">
+				<Stack flex={5} pl={1} pb={2} gap={3}>
 					<OfferHeader offer={offer} />
 					<OfferTechStack offer={offer} />
 					<OfferDescription offer={offer} />
